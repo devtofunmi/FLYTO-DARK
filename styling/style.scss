@@ -1,0 +1,586 @@
+$lightred:hsl(0, 100%, 63%);
+$blue:hsl(198, 60%, 50%);
+$cyan:hsl(176, 68%, 64%);
+
+$darkblue:hsl(217, 28%, 15%);
+$mainbg:hsl(218, 28%, 13%);
+$footerbg:hsl(216, 53%, 9%);
+$tesbg:hsl(219, 30%, 18%);
+$white:hsl(0, 0%, 100%);
+
+
+
+@mixin button {
+    margin-top: 20px;
+    padding: 10px 50px;
+    border-radius: 20px;
+    background-color: $cyan;
+    color: $white;
+    cursor: pointer;
+}
+
+
+
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    background-color: $darkblue;
+    color: $white;
+    font-family: sans-serif;
+}
+.container{
+    background-color: $mainbg;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 50px;
+    .logo img{
+        margin-top: 25px;
+        width: 100px;
+    }
+    .lists{
+        ul{
+            display: flex;
+        }
+        li{
+            list-style: none;
+            margin-top: 20px;
+        } 
+        a{
+            text-decoration: none;
+            color: $white;
+            padding: 30px;
+        }
+    }
+}
+.bg{
+    z-index: -1;
+    position: absolute;
+    top: 400px;
+    img{
+        width: 100%;
+    }
+}
+header{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    .himg{
+        img{
+            margin-top: 10px;
+            width: 350px;
+        }
+    } 
+    .header-content{
+        margin-top: 20px;
+        .mob{
+            display: none;
+        }
+        .mobp{
+            display: none;
+        }
+        p{
+            margin-top: 20px;
+        }
+        button{
+            @include button();
+        }
+    }
+}
+section{
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    margin-top: 200px;
+    padding:10px 230px;
+    background-color: $mainbg;
+    .first{
+        .access{
+            h2{
+                margin-top: 20px;
+               
+            }
+            p{
+                margin-top: 20px;
+            }
+        }
+        .collab{
+            margin-top: 80px;
+            h2{
+                margin-top: 20px;
+            }
+            p{
+                margin-top: 20px;
+            }
+        }
+    }
+    .second{
+        .secure{
+            h2{
+                margin-top: 20px;
+            }
+            p{
+                margin-top: 20px;
+            }
+           
+        }
+        .store{
+            margin-top: 80px;
+            h2{
+                margin-top: 20px;
+            }
+            p{
+                margin-top: 20px;
+            }
+        }
+    }
+}
+hero{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 150px;
+    margin-top: 80px;
+    background-color: $mainbg;
+    .repo{
+        img{
+            width: 100%;
+        }
+    }
+    .hero-content{
+        margin-top: 70px;
+        padding-left: 100px;
+        p{
+            margin-top: 15px;
+        }
+        .ar{
+            margin-top: 20px;
+            color: $cyan;
+            img{
+                padding-left: 8px;
+            }
+        }
+        .arr{
+            width: 170px;
+            height: 1px;
+            background-color: $cyan;
+            margin-top: 5px;
+        }
+    }
+}
+.bgq{
+    position: absolute;
+    left: 50px;
+    top: 1800px;
+}
+.allsec{
+    display: flex;
+    flex-direction: row;
+    padding-right: 50px;
+    margin-top: 80px;
+    margin-bottom: 300px;
+}
+.test{
+    padding: 50px;
+    .testimony{
+        width: 100%;
+        height: 80%;
+        background-color: $tesbg;
+        padding: 20px;
+        p{
+            line-height: 25px;
+            font-size: 18px;
+        }
+    }
+    .both{
+        display: flex;
+        margin-top: 30px;
+        .profile img{
+            width: 50px;
+            border-radius: 100px;
+        }
+        .contents{
+            padding:0px 10px;
+        }
+    }
+}
+.loly{
+    padding: 50px 200px;
+    padding-left: 250px;
+    width: 60%;
+    height: 10%;
+    position: absolute;
+    top: 2200px;
+}
+.early{
+    
+    background-color: $darkblue;
+    padding: 50px;
+    .pop{
+        text-align: center;
+        p{
+            margin-top: 20px;
+        }
+    }
+    .ear-contents{
+        display: flex;
+        justify-content: space-between;
+        margin-top: 30px;
+        padding: 0px 25px;
+        input{
+            height: 40px;
+            width: 400px;
+            border-radius: 20px;
+            &::placeholder{
+                padding: 20px;
+                padding-left: 30px;
+            }
+        }
+        button{
+            @include button();
+            margin-top: 0px;
+            padding: 15px 30px;
+        }
+    }
+    
+}
+footer{
+    display: flex;
+    padding: 20px 50px;
+    background-color:$footerbg;
+    padding: 100px;
+    .apple{
+        margin-top: 100px;
+    }
+    .lorem{
+        display: flex;
+        margin-top: 20px;
+        p{
+            padding-left: 20px;
+            line-height: 20px;
+        }
+    }
+    .info{
+        display: flex;
+        margin-top: 179px;
+        flex-direction: column;
+        padding-left: 80px;
+        .ph{
+            display: flex;
+            p{
+                padding-left: 20px;
+            }
+        }
+        .email{
+            display: flex;
+            margin-top: 20px;
+            p{
+                padding-left: 20px;
+            }
+        }
+    }
+    .about{
+        display: flex;
+        flex-direction: column;
+        margin-top: 150px;
+        padding-left:80px;
+        a{
+           text-decoration: none;
+           color: $white;
+           padding-top: 20px;
+        }
+    }
+    .contact{
+        display: flex;
+        flex-direction: column;
+        margin-top: 150px;
+        padding-left:80px;
+        a{
+            text-decoration: none;
+            color: $white;
+            padding-top: 20px;
+         }
+    }
+    .icon{
+        margin-top: 175px;
+        padding-left: 100px;
+        img{
+            padding-left: 10px;
+        }
+    }
+}
+.mobile-bg{
+    display: none;
+}
+
+
+
+
+
+
+@media (max-width:425px){
+    nav{
+        padding: 20px 10px;
+        .logo img{
+            margin-top: 15px;
+            width: 100px;
+            padding-left: 10px;
+        }
+        .lists{
+            ul{
+                display: flex;
+            }
+            li{
+                list-style: none;
+                margin-top: 20px;
+            } 
+            a{
+                text-decoration: none;
+                color: $white;
+                padding: 10px;
+            }
+        }
+    }
+
+
+    header{
+        .himg{
+            margin-top: 30px;
+        }
+        .header-content{
+            margin-top: 30px;
+            h1{
+                display: none;
+            }
+            p{
+                display: none;
+            }
+            .mob{
+                display: block;
+                font-size: 30px;
+            }
+            .mobp{
+                display: block;
+                line-height: 30px;
+            }
+        }
+    }
+
+
+    .bg{
+        display: none;
+    }
+
+
+    section{
+        margin-top: 100px;
+        padding:10px 25px;
+        flex-direction: column;
+        .first{
+            .access{
+                h2{
+                    margin-top: 20px;
+                   
+                }
+                p{
+                    margin-top: 20px;
+                    font-size: 15px;
+                }
+            }
+            .collab{
+                margin-top: 80px;
+                h2{
+                    margin-top: 20px;
+                }
+                p{
+                    margin-top: 20px;
+                    font-size: 15px;
+                }
+            }
+        }
+        .second{
+            margin-top: 80px;
+            .secure{
+                h2{
+                    margin-top: 20px;
+                }
+                p{
+                    margin-top: 20px;
+                    font-size: 15px;
+                }
+               
+            }
+            .store{
+                margin-top: 80px;
+                h2{
+                    margin-top: 20px;
+                }
+                p{
+                    margin-top: 20px;
+                    font-size: 15px;
+                }
+            }
+        }
+    }
+    .bgq{
+        top: 2680px;
+    }
+
+    hero{
+        padding: 10px 20px;
+        margin-top: 80px;
+        flex-direction: column;
+        .repo{
+            img{
+                width: 100%;
+            }
+        }
+        .hero-content{
+            margin-top: 70px;
+            padding-left: 0px;
+        }
+    }
+    .allsec{
+        flex-direction: column;
+    }
+    .test{
+        padding: 50px;
+        .testimony{
+            p{
+                line-height: 25px;
+                font-size: 15px;
+            }
+            h3{
+                font-size: 16px;
+            }
+        }
+    }
+
+
+
+
+    .loly{
+        padding: 50px 100px;
+        padding-left: 20px;
+        width: 90%;
+        height: 6%;
+        position: absolute;
+        top: 3700px;
+    }
+    .early{
+        
+        background-color: $darkblue;
+        padding: 50px;
+        .pop{
+            text-align: center;
+            p{
+                margin-top: 20px;
+                font-size: 14px;
+            }
+        }
+        .ear-contents{
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            margin-top: 30px;
+            padding: 0px;
+            input{
+                height: 40px;
+                width: 280px;
+                border-radius: 20px;
+                &::placeholder{
+                    padding: 20px;
+                    padding-left: 20px;
+                }
+            }
+            button{
+                @include button();
+                margin-top: 20px;
+                padding: 15px 75px;
+            }
+        }
+        
+    }
+
+
+    footer{
+        display: flex;
+        padding: 20px 50px;
+        background-color:$footerbg;
+        padding-left: 30px;
+        flex-direction: column;
+        .apple{
+            margin-top: 250px;
+        }
+        .lorem{
+            display: flex;
+            margin-top: 20px;
+            p{
+                padding-left: 10px;
+                line-height: 20px;
+            }
+        }
+        .info{
+            display: flex;
+            margin-top: 179px;
+            flex-direction: column;
+            padding-left: 0px;
+            .ph{
+                display: flex;
+                p{
+                    padding-left: 10px;
+                }
+            }
+            .email{
+                display: flex;
+                margin-top: 20px;
+                p{
+                    padding-left: 10px;
+                }
+            }
+        }
+        .about{
+            display: flex;
+            flex-direction: column;
+            margin-top: 150px;
+            padding-left:0px;
+            a{
+               text-decoration: none;
+               color: $white;
+               padding-top: 20px;
+            }
+        }
+        .contact{
+            display: flex;
+            flex-direction: column;
+            margin-top: 150px;
+            padding-left:0px;
+            a{
+                text-decoration: none;
+                color: $white;
+                padding-top: 20px;
+             }
+        }
+        .icon{
+            margin-top: 175px;
+            padding-left: 110px;
+            img{
+                padding-left: 10px;
+            }
+        }
+    }
+
+    .mobile-bg{
+        display: none;
+        img{
+            width: 100%;
+            position: absolute;
+            top: 340px;
+            z-index: -1;
+        }
+        
+    }
+}
